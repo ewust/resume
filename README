@@ -1,0 +1,12 @@
+Eric Wustrow's LaTeX Résumé
+---------------------------
+
+I'm putting this in github because I'm too lazy to set up a private github
+repos, and I thought it'd be nice to track its changes over time.
+
+I guess it would be kinda weird if people forked this, because more than
+likely, you aren't me. Feel free to copy the style layout, or res.cls
+(written by Michael DeCorte).
+
+To build resume.pdf, run:
+make

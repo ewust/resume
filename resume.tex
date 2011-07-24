@@ -1,0 +1,134 @@
+% template from http://rpi.edu/dept/arc/training/latex/resumes/
+\documentclass{res}
+%\usepackage{fullpage}
+\setlength{\topmargin}{-.25in}
+\setlength{\textheight}{11in} %increase text height to fit on 1-page
+
+\usepackage{amssymb}
+%\renewcommand{labelitemi}{\hfill$\square$}
+\newcommand{\sqitem}{\item[\tiny$\blacksquare$]}
+\newcommand{\sqlist}{\begin{list}{$\bullet$}
+  { \setlength{\itemsep}{0pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}
+	\setlength{\leftmargin}{6.0em}
+	%\setlength{\labelwidth}{5em}
+	\setlength{\labelsep}{2.5em} } }
+\newcommand{\sqend}{\end{list}}
+
+
+\begin{document}
+
+\name{Eric Wustrow\\https://ericw.us/trow}
+  % \\[12pt] adds a blank line after name
+
+\address{\emph{Current Address}	\\
+			1929 Plymouth Rd Apt 3024	\\
+			Ann Arbor, MI 48105			\\
+										\\
+			phone: 734.330.8702			\\
+			email: ewust@umich.edu}
+\address{\emph{Permanent Address}	\\
+			13768 Howen Dr				\\
+			Saratoga, CA 95070}
+
+\begin{resume}
+
+%\def\clap#1{\hbox to \textwidth{\hss #1\hss}}
+
+%\clap{Eric Wustrow}
+%\clap{http://ericw.us/trow}
+
+%\clap{WHAT \\ 
+%	IS THIS}
+%\clap{WHAT}
+%\clap{LOOOOOOOOOOOOOOOOOOOONG CAT IS \\ NEW LINE}
+
+\section{Education}
+	\textbf{University of Michigan}  Expected graduation 2015%& 2010-present \\
+	\sqlist	
+		\sqitem Ph.D. in Computer Science and Engineering 
+	\sqend
+
+	\textbf{University of Michigan}
+	\sqlist
+		\sqitem B.S.E. in Computer Engineering, May 2010.
+		\sqitem GPA 3.75/4.00
+	\sqend
+
+\section{Courses}
+	\begin{tabular}{l l}
+	\textbf{EECS 373} Microprocessor based Systems & 
+					\textbf{EECS 470} Computer Architecture \\
+	\textbf{EECS 451} DSP and analysis & 
+					\textbf{EECS 482} Intro to Operating Systems \\
+	\textbf{EECS 461} Embedded Control Systems & 
+					\textbf{EECS 483} Compiler Construction \\
+											  &
+					\textbf{EECS 588} Computer \& Network Security \\
+	\end{tabular}
+
+\section{Publications}
+	\textbf{Internet Background Radiation Revisited} \\
+	Eric Wustrow, Manish Karir, Michael Bailey, Farnam Jahanian and Geoff Houston \\
+	To appear at the \emph{10th Internet Measurement Conference} 
+	(IMC 2010), November 2010.
+	
+	\textbf{Security Analysis of India's Electronic Voting  Machines} \\ 
+	Scott Wolchok, Eric Wustrow, J. Alex Halderman, Hari K. Prasad, Arun Kankipati, \\
+	Sai Krishna Sakhamuri, Vasavya Yagati, and Rop Gonggrijp \\
+	To appear in \emph{Proc. 17th ACM Conference on Computer and Communications 
+	Security} \\
+	(CCS 2010), October 2010.
+
+	\textbf{PE-ARP: Port Enhanced ARP for IPv4 Address Sharing} \\
+	Manish Karir, Eric Wustrow, Jim Rees \\
+	Merit Networks Technical Report, July 2009.	
+
+
+\section{Projects}
+	\textbf{Laundry Laundering} (EECS 588 final project)
+		\sqlist
+		\sqitem Analyzed the security of University card-swipe washing machines
+		\sqitem Built prototype to show discovered vulnerabilities could be used 
+				to obtain free laundry
+		\sqend 
+	
+	\textbf{Security Analysis of India's Electronic Voting Machines}
+		(Univeristy of Michigan)
+		\sqlist
+		\sqitem Designed look-alike PCB of an EVM display board, with additional
+				functionality
+		\sqend 
+
+%	\textbf{Internet Interrupter} (EECS 373 final project)
+%		\sqlist
+%		\sqitem Programmed an Ethernet driver and applications in PowerPC assembly
+%				and C
+%		\sqitem Intercepted and injected live HTTP requests
+%		\sqend
+
+\section{Experience}
+
+	\textbf{Software Intern} (Qualcomm Inc.) Summer 2010
+		\sqlist
+		\sqitem Worked with CDMA Technologies team testing LTE functionality of 
+			modem software
+		\sqend
+
+	\textbf{Network Engineer Intern} (Merit Networks, Inc.) Summer 2009
+		\sqlist
+		\sqitem Modified Linux kernel to support new IPv4 sharing idea
+		\sqitem Wrote a BGP looking-glass chat bot and presented tool at NANOG 47
+		\sqend
+
+	\textbf{Radio Aurora Explorer (RAX) Satellite} (University of Michigan) Summer 2009
+		\sqlist
+		\sqitem Designed on-board PCB to process experiment data in orbit
+		\sqitem Wrote low level drivers and interfaces for other on-board systems
+		\sqend
+
+\end{resume}
+
+\end{document}
