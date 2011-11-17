@@ -2,7 +2,7 @@
 \documentclass{res}
 %\usepackage{fullpage}
 \setlength{\topmargin}{-.25in}
-\setlength{\textheight}{11in} %increase text height to fit on 1-page
+\setlength{\textheight}{9in} %increase text height to fit on 1-page
 
 \usepackage{amssymb}
 %\renewcommand{labelitemi}{\hfill$\square$}
@@ -57,6 +57,7 @@
 		\sqitem GPA 3.75/4.00
 	\sqend
 
+\if0
 \section{Courses}
 	\begin{tabular}{l l}
 	\textbf{EECS 373} Microprocessor based Systems & 
@@ -68,66 +69,54 @@
 											  &
 					\textbf{EECS 588} Computer \& Network Security \\
 	\end{tabular}
+\fi
 
 \section{Publications}
+    \textbf{Telex: Anticensorship in the Network Infrastructure} \\
+    Eric Wustrow, Scott Wolchok, Ian Goldberg and J. Alex Halderman \\
+    In \emph{Proc. 20th USENIX Security Symposium} \\
+    (\textbf{USENIX 2011}), August 2011.
+
 	\textbf{Internet Background Radiation Revisited} \\
 	Eric Wustrow, Manish Karir, Michael Bailey, Farnam Jahanian and Geoff Houston \\
-	To appear at the \emph{10th Internet Measurement Conference} 
-	(IMC 2010), November 2010.
+	In \emph{Proc. 10th Internet Measurement Conference} \\
+	(\textbf{IMC 2010}), November 2010.
 	
 	\textbf{Security Analysis of India's Electronic Voting  Machines} \\ 
 	Scott Wolchok, Eric Wustrow, J. Alex Halderman, Hari K. Prasad, Arun Kankipati, \\
 	Sai Krishna Sakhamuri, Vasavya Yagati, and Rop Gonggrijp \\
-	To appear in \emph{Proc. 17th ACM Conference on Computer and Communications 
+	In \emph{Proc. 17th ACM Conference on Computer and Communications 
 	Security} \\
-	(CCS 2010), October 2010.
+	(\textbf{CCS 2010}), October 2010.
 
 	\textbf{PE-ARP: Port Enhanced ARP for IPv4 Address Sharing} \\
 	Manish Karir, Eric Wustrow, Jim Rees \\
 	Merit Networks Technical Report, July 2009.	
 
+\section{Talks}
+    \textbf{Telex: Anticensorship in the Network Infrastructure} \\
+    USENIX Security Symposium (San Francisco), August 2011
 
-\section{Projects}
-	\textbf{Laundry Laundering} (EECS 588 final project)
-		\sqlist
-		\sqitem Analyzed the security of University card-swipe washing machines
-		\sqitem Built prototype to show discovered vulnerabilities could be used 
-				to obtain free laundry
-		\sqend 
-	
-	\textbf{Security Analysis of India's Electronic Voting Machines}
-		(Univeristy of Michigan)
-		\sqlist
-		\sqitem Designed look-alike PCB of an EVM display board, with additional
-				functionality
-		\sqend 
+    \textbf{Internet Background Radiation Revisited} \\
+    Internet Measurement Conference (Melbourne, Australia), November 2010
 
-%	\textbf{Internet Interrupter} (EECS 373 final project)
-%		\sqlist
-%		\sqitem Programmed an Ethernet driver and applications in PowerPC assembly
-%				and C
-%		\sqitem Intercepted and injected live HTTP requests
-%		\sqend
+    \textbf{Security Analysis of India's Electronic Voting MAchines} \\ 
+    ACM Conference on Computer and Communications Security (Chicago), October 2010
 
-\section{Experience}
+    \textbf{BGPBotz: IM-based route views} \\
+    NANOG 47 (Dearborn, Michigan), October 2009
 
-	\textbf{Software Intern} (Qualcomm Inc.) Summer 2010
-		\sqlist
-		\sqitem Worked with CDMA Technologies team testing LTE functionality of 
-			modem software
-		\sqend
+\section{Teaching}
+    \textbf{EECS 588} Computer and Network Security (Winter 2011)
+        \sqlist
+        \sqitem Taught several lectures and advised students on course projects
+        \sqend
 
-	\textbf{Network Engineer Intern} (Merit Networks, Inc.) Summer 2009
-		\sqlist
-		\sqitem Modified Linux kernel to support new IPv4 sharing idea
-		\sqitem Wrote a BGP looking-glass chat bot and presented tool at NANOG 47
-		\sqend
+    \textbf{EECS 398} Introduction to Computer Security (Fall 2011)
+        \sqlist
+        \sqitem Taught several lectures
+        \sqend
 
-	\textbf{Radio Aurora Explorer (RAX) Satellite} (University of Michigan) Summer 2009
-		\sqlist
-		\sqitem Designed on-board PCB to process experiment data in orbit
-		\sqitem Wrote low level drivers and interfaces for other on-board systems
-		\sqend
 
 \end{resume}
 
