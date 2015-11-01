@@ -1,0 +1,323 @@
+% https://ewust.pad.jhalderm.com/build/resume.pdf
+
+% template from http://rpi.edu/dept/arc/training/latex/resumes/
+\documentclass[margin,11pt]{res} %ethertex: https://raw.githubusercontent.com/ewust/resume/master/res.cls
+\usepackage{fullpage}
+\usepackage{fancyhdr}
+\usepackage{color}
+\definecolor{MyDarkBlue}{rgb}{0.05,0,0.5} 
+\usepackage[
+  letterpaper=true,breaklinks=true,colorlinks=true,linkcolor=black,%
+citecolor=black,urlcolor=MyDarkBlue,bookmarks=false,bookmarksopen=false,%
+  pdftex]{hyperref}
+
+\textwidth=5.2in
+\setlength{\topmargin}{-.125in}
+\setlength{\textheight}{9in} %increase text height to fit on 1-page
+\setlength{\parskip}{0.8em}
+
+\usepackage[T1]{fontenc}
+\usepackage{kpfonts}
+\usepackage{changepage}
+
+\usepackage{amssymb}
+%\renewcommand{labelitemi}{\hfill$\square$}
+\newcommand{\sqitem}{\item[\tiny$\blacksquare$]}
+\newcommand{\sqlist}{\begin{list}{$\bullet$}
+  { \setlength{\itemsep}{0pt}
+        \setlength{\parsep}{0pt}
+        \setlength{\topsep}{0pt}
+        \setlength{\partopsep}{0pt}
+        \setlength{\leftmargin}{6.0em}
+        %\setlength{\labelwidth}{5em}
+        \setlength{\labelsep}{2.5em} } }
+\newcommand{\sqend}{\end{list}}
+\newcommand{\inwidth}{1in}
+\renewcommand{\medskip}{}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+\begin{adjustwidth}{-1.3in}{0pt}
+\noindent{\LARGE\bf Eric Wustrow}
+\vspace{20pt}
+
+\noindent 
+\parbox[m]{4in}{
+University of Michigan\\
+Computer Science \& Engineering\\
+2260 Hayward Street $\cdot$ Ann Arbor, MI \,48109
+}
+\begin{tabular}{ll}
+{Web}:&\url{https://ericw.us/trow}\\
+{Email}:&ewust@umich.edu\\
+{Phone}:& 734.330.8702
+\end{tabular}
+\vspace{10pt}
+\end{adjustwidth}
+
+\section{\large Education}
+
+        \emph{University of Michigan}\\
+        Ph.D. in Computer Science, expected June 2015\\
+        \emph{Advisor:} J. Alex Halderman
+
+        \emph{University of Michigan}\\
+        B.S.E. in Computer Engineering, May 2010
+
+\vspace{6pt}
+\section{\large Research}
+
+My research focuses on \textbf{computer security} from a systems perspective. My graduate work has spanned censorship resistance, Internet protocol security, and embedded systems security.
+I have exposed vulnerabilities in insecure electronic voting systems in the U.S. and abroad, developed detection techniques that uncovered weaknesses in widespread cryptographic protocol implementations, and created systems for circumventing large-scale Internet censorship in countries such as Iran and China.
+
+\vspace{6pt}
+\section{\large Publications}
+
+    \textbf{\href{https://www.radsec.org/paper.html}{Security Analysis of a Full-Body Scanner}} \\
+    Keaton Mowery, Eric Wustrow, Tom Wypych, Corey Singleton, Chris Comfort, Eric Rescorla, Stephen Checkoway, J. Alex Halderman, and Hovav Shacham \\
+    In \emph{Proc.\ 23rd USENIX Security Symposium} \\
+    (\textbf{USENIX Security 2014}), August 2014. \\
+    Acceptance rate: 19\% (67/350)
+
+    \textbf{\href{https://jhalderm.com/pub/papers/tapdance-sec14.pdf}{TapDance: End-to-Middle Anticensorship without Flow Blocking}} \\
+    Eric Wustrow, Colleen M. Swanson, and J. Alex Halderman \\
+    In \emph{Proc.\ 23rd USENIX Security Symposium} \\
+    (\textbf{USENIX Security 2014}), August 2014. \\
+    Acceptance rate: 19\% (67/350)
+
+    \textbf{\href{http://eprint.iacr.org/2013/734}{Elliptic Curve Cryptography in Practice}} \\
+    Joppe W. Bos, J. Alex Halderman, Nadia Heninger, Jonathan Moore,\\ Michael Naehrig, and Eric Wustrow \\
+    In \emph{Proc.\ 18th Intl.\ Conference on Financial Cryptography and Data Security} \\
+    (\textbf{FC 2014}), March 2014. \\
+    Acceptance rate: 22\% (31/138)
+
+    \textbf{\href{https://zmap.io/paper.html}{ZMap: Fast Internet-wide Scanning and its Security Applications}} \\
+    Zakir Durumeric, Eric Wustrow, and J. Alex Halderman \\
+    In \emph{Proc.\ 22nd USENIX Security Symposium} \\
+    (\textbf{USENIX Security 2013}), August 2013. \\
+    Acceptance rate: 16\% (45/277)
+
+\newpage
+
+    \textbf{\href{https://jhalderm.com/pub/papers/cage-fc13.pdf}{CAge: Taming Certificate Authorities by Inferring Restricted Scopes}} \\
+    James Kasten, Eric Wustrow, and J. Alex Halderman \\
+    In \emph{Proc.\ 17th Intl.\ Conference on Financial Cryptography and Data Security} \\
+    (\textbf{FC 2013}), April 2013.
+
+    \textbf{\href{https://factorable.net/weakkeys12.conference.pdf}{Mining Your Ps and Qs: Widespread Weak Keys In Network Devices}} \\
+    Nadia Heninger, Zakir Durumeric, Eric Wustrow, and J. Alex Halderman \\
+    In \emph{Proc. 21st USENIX Security Symposium} \\
+    (\textbf{USENIX Security 2012}), August 2012. \\
+    \textbf{$\star$ Awarded Best Paper.} \\
+    Acceptance rate: 19\% (43/222)
+
+    \textbf{\href{https://ericw.us/trow/dc-internet-voting-fc.pdf}{Attacking the Washington, D.C. Internet Voting System}} \\
+    Scott Wolchok, Eric Wustrow, Dawn Isabel, and J. Alex Halderman \\
+    In \emph{Proc. 16th Financial Cryptography and Data Security} \\
+    (\textbf{FC 2012}), February 2012. \\
+    Acceptance rate: 26\% (33/88)
+
+    \textbf{\href{https://telex.cc/pub/telex-usenixsec11.pdf}{Telex: Anticensorship in the Network Infrastructure}} \\
+    Eric Wustrow, Scott Wolchok, Ian Goldberg and J. Alex Halderman \\
+    In \emph{Proc.\ 20th USENIX Security Symposium} \\
+    (\textbf{USENIX Security 2011}), August 2011. \\
+        \textbf{$\star$ PET Award Runner-up.} \\
+    Acceptance rate: 17\% (35/204)
+
+    \textbf{\href{https://ericw.us/trow/imc10-wustrow.pdf}{Internet Background Radiation Revisited}} \\
+        Eric Wustrow, Manish Karir, Michael Bailey, Farnam Jahanian and\\ Geoff Houston \\
+        In \emph{Proc.\ 10th Internet Measurement Conference} \\
+        (\textbf{IMC 2010}), November 2010.\\
+        Acceptance rate: 22\% (47/211)
+
+    \textbf{\href{http://www.cse.umich.edu/~jhalderm/pub/papers/evm-ccs10.pdf}{Security Analysis of India's Electronic Voting  Machines}} \\ 
+        Scott Wolchok, Eric Wustrow, J. Alex Halderman, Hari K. Prasad, Arun Kankipati, \\
+        Sai Krishna Sakhamuri, Vasavya Yagati, and Rop Gonggrijp \\
+        In \emph{Proc.\ 17th ACM Conference on Computer and Communications 
+        Security} \\
+        (\textbf{CCS 2010}), October 2010. \\
+        \textbf{$\star$ Highest Rated Submission.} \\
+        Acceptance rate: 17\% (55/320)
+
+    \textbf{\href{https://ericw.us/trow/pe-arp.pdf}{PE-ARP: Port Enhanced ARP for IPv4 Address Sharing}} \\
+        Manish Karir, Eric Wustrow, Jim Rees \\
+        Merit Networks Technical Report, July 2009.        
+
+\if0
+\vspace{6pt}
+\section{\large Bibliometrics}
+
+Citations: 361\\
+$h$-index: 8\\
+\url{https://scholar.google.com/citations?user=becbtxgAAAAJ}
+\fi
+
+\newpage
+
+\vspace{6pt}
+\section{\large Broader\\Impact}
+
+\textbf{\href{https://radsec.org}{Analysis of a Full Body Scanner}} (2014)\\
+We revealed that X-ray backscatter full-body scanners previously used in airports were insufficient to detect the non-metallic threats they were specifically intended to find. This work raised serious questions about TSA's procedures for purchasing and deploying security technologies.
+
+\textbf{\href{https://zmap.io/}{ZMap Internet-Wide Scanner}} (2013)\\
+ZMap is an open-source, Internet-wide network scanner tool that is able to probe the entire IPv4 address space in under 45 minutes, over 1000 times faster than previous approaches. Now a major open-source project, it has been adopted widely by researchers performing Internet security measurement.
+
+\textbf{\href{https://factorable.net/}{Detection of Widespread Weak Keys in Network Devices}} (2012)\\
+By scanning the Internet for TLS and SSH hosts, we discovered that millions of embedded networked devices had generated weak cryptographic keys using insufficient entropy sources. We disclosed vulnerabilities to more than 60 network device makers and spawned major changes to the Linux kernel's random number generator.
+
+\textbf{\href{https://telex.cc/}{Telex Anticensorship System}} (2011)\\
+Telex is a fundamentally new form of censorship circumvention that places proxies in the middle of the network, at Internet service providers (ISPs) outside censoring countries.  This makes them difficult for censors to block without blocking large amounts of unrelated traffic. I'm now working with a large ISP to deploy a Telex testbed.\looseness=-1
+
+\textbf{\href{http://indiaevm.org/}{Analysis of India's E-Voting System}} (2010)\\
+We demonstrated low-tech attacks that could compromise India's nation-wide electronic voting machines, showing that the system was not tamperproof as the government claimed.  As a result, India is working to deploy new machines that add a paper audit trail, changing how the country votes.
+
+\vspace{6pt}
+\section{\large Honors and Awards}
+
+    \textbf{Best Paper of USENIX Security 2012} 
+    for ``Mining Your Ps and Qs: Detection of Widespread Weak Keys in Network Devices.''
+
+    \textbf{Runner-up for 2012 PET Award} for Outstanding Research in Privacy Enhancing Technologies for ``Telex: Anticensorship in the Network Infrastructure.''
+
+ %   \textbf{GSI Honorable mention} 
+%    for assistance in teaching EECS 588 ``Computer and Network Security'' (2010--11).
+
+    \textbf{NSF Graduate Research Fellowship} 
+    for research in combating Internet censorship by state-level actors (2011-present).
+    
+    \textbf{OpenITP Fellowship at the New American Foundation} 
+    for research in the area of Internet Freedom and anticensorship (2013--14).
+
+\vspace{6pt}
+\section{\large Invited Talks}
+
+\emph{Security Analysis of a Full-Body Scanner} \\
+    31st Chaos Communication Congress (Hamburg), December 2014
+
+\emph{Anticensorship in the Network Infrastructure} \\
+    RIPE 68 (Warsaw), May 2014
+
+%\emph{Elliptic Curve Cryptography in Practice} \\
+%    Financial Cryptography 2014 (Barbados), March 2014
+
+\emph{Finding Whom to Blame: Network Tools} \\
+    Michigan Hackers Tech Talk (Ann Arbor), October 2012
+    
+\emph{Telex: Anticensorshp in the Network Infrastructure} \\
+    Boston Freedom in Online Communication, March 2013\\
+    RightsCon Circumvention Tech Summit (Rio de Janeiro), May 2012 \\
+    NANOG 54 (San Diego), February 2012 %\\
+%    USENIX Security Symposium (San Francisco), August 2011
+
+%\emph{Internet Background Radiation Revisited} \\
+%    Internet Measurement Conference (Melbourne, Australia), November 2010
+
+%\emph{Security Analysis of India's Electronic Voting Machines} \\
+%    ACM CCS (Chicago), October 2010
+
+\emph{BGPBotz: IM-based route views} \\
+    NANOG 47 (Dearborn, Michigan), October 2009
+
+\vspace{6pt}
+\section{\large Professional Service}
+
+     \emph{Program committee member:}
+          USENIX Workshop on Free and Open Communications on the Internet (FOCI) 2013.
+     
+    \emph{External reviewer:}
+    USENIX Security Symposium 2014,
+    ACM Conference on Computer and Communications Security (CCS) 2012--14,
+    IEEE/ACM Transactions on Networking 2012.
+
+\vspace{6pt}
+\section{\large Teaching}
+
+    \emph{EECS 388: Introduction to Computer Security}  (2015)\\
+    \textbf{Co-instructor} of undergraduate security course, with Professor Z. Morley Mao. Responsible for teaching half of lecture sections and developing curriculum.
+    
+    \emph{EECS 588: Computer and Network Security} (2011--2014)\\
+    Served as teaching assistant, guest lectured, and advised course project groups.
+    
+    %\emph{EECS 398: Introduction to Computer Security}  (2011, 2013)\\
+    %Guest taught several lectures each year.
+    
+    \emph{Camp CAEN: Computer programming summer camp}  (2008)\\
+    Taught middle- and high-school students HTML, CSS, Javascript, and Java.
+
+\vspace{6pt}
+\section{\large Relevant Internships}
+
+    \emph{Square, Inc.} --- Software Security Intern (2014) \\
+    Implemented new secure channel for next-generation credit card reader.
+    
+    \emph{Qualcomm} --- Software Intern (2010) \\
+    Worked with CDMA Technologies team testing LTE software functionality.
+    
+    \emph{Merit Networks} --- Network Engineering Intern (2009) \\
+    Modified Linux kernel to support new IPv4 sharing concepts.
+   % Wrote a BGP looking-glass chat bot and presented tool at NANOG 47.
+
+    \emph{Radio Aurora Explorer (RAX) Satellite} (2009) \\
+    Designed hardware and software for orbital experiments.
+
+
+\newpage
+
+\vspace{6pt}
+
+\if0
+\section{\large References}
+    
+\textbf{J. Alex Halderman}\\
+\emph{Assistant Professor}\smallskip\\
+Computer Science \& Engineering\\
+University of Michigan\\
+2260 Hayward Street\\
+Ann Arbor, MI \,48109\\
+(734) 647-1806\\
+jhalderm@eecs.umich.edu
+\vspace{6pt}
+
+\textbf{Michael Bailey}\\
+    \emph{Associate Professor}\smallskip\\
+    {ECE Department\\
+    University of Illinois\\
+    1308 W Main Street \\
+    Urbana, IL \,61801-2307\\
+     (734) 320-3810\\
+    mdbailey@illinois.edu}
+\vspace{6pt}
+
+\textbf{Z. Morley Mao}\\
+\emph{Associate Professor}\smallskip\\
+Computer Science \& Engineering\\
+University of Michigan\\
+2260 Hayward Street\\
+Ann Arbor, MI \,48109\\
+(734) 763-5407\\
+zmao@umich.edu
+\vspace{6pt}
+
+\textbf{Brian Noble}\\
+\emph{Professor}\smallskip\\
+Computer Science \& Engineering\\
+University of Michigan\\
+2260 Hayward Street\\
+Ann Arbor, MI \,48109\\
+(734) 936-2971\\
+bnoble@umich.edu
+\vspace{6pt}
+
+\fi
+
+
+
+\end{document}
+
