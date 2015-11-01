@@ -1,9 +1,13 @@
 
 
+
+cv: cv.tex res.cls
+	pdflatex cv.tex
+
 resume: resume.tex res.cls
 	pdflatex resume.tex
 
-all: resume
+all: cv
 
 
 clean:
