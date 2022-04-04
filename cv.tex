@@ -5,7 +5,15 @@
 \usepackage{fullpage}
 \usepackage{fancyhdr}
 \usepackage{color}
+%\usepackage{fontspec}
 \definecolor{MyDarkBlue}{rgb}{0.05,0,0.5} 
+
+\newcommand\blfootnote[1]{%
+    \begingroup
+    \renewcommand\thefootnote{}\footnote{#1}%
+    \addtocounter{footnote}{-1}%
+    \endgroup
+}
 \usepackage[
   letterpaper=true,breaklinks=true,colorlinks=true,linkcolor=black,%
 citecolor=black,urlcolor=MyDarkBlue,bookmarks=false,bookmarksopen=false,%
@@ -64,6 +72,9 @@ Electrical, Computer, and Energy Engineering\\
 
 \section{\large Education}
 
+        \emph{University of Colorado Boulder} 2016-present\\
+        Assistant Professor of Electrical, Computer, and Energy Engineering (ECEE)
+
         \emph{University of Michigan}\\
         Ph.D. in Computer Science, November 2015\\
         \emph{Advisor:} J. Alex Halderman
@@ -74,77 +85,126 @@ Electrical, Computer, and Energy Engineering\\
 \vspace{6pt}
 \section{\large Research}
 
-My research focuses on \textbf{computer security} from a systems perspective. My work has spanned censorship resistance, Internet protocol security, and architecture security.
+My research focuses on \textbf{computer security} from a systems perspective.
+Much of my work focuses on network security and censorship resistance.
+I have \textbf{created and deployed censorship circumvention systems} that get around Internet
+censorship in countries like Iran and China, studied new ways that governments
+block circumvention tools, and built tools to combat new censorship methods.
+Beyond censorship, I also work on Internet protocol security, architecture security, and cryptocurrencies.
 
-I have exposed vulnerabilities in insecure electronic voting systems in the U.S. and abroad, developed detection techniques that uncovered weaknesses in widespread cryptographic protocol implementations, and created systems for circumventing large-scale Internet censorship in countries such as Iran and China.
+%I have exposed vulnerabilities in insecure electronic voting systems in the U.S. and abroad, developed detection techniques that uncovered weaknesses in widespread cryptographic protocol implementations, and created systems for circumventing large-scale Internet censorship in countries such as Iran and China.
 
 \vspace{6pt}
 \section{\large Publications}
+    \textbf{Throttling Twitter: An Emerging Censorship Technique in Russia} \\
+    Diwen Xue, Reethika Ramesh, ValdikSS, Leonid Evdokimov, Andrey Viktorov, Arham Jain, Eric Wustrow, Simone Basso, and Roya Ensafi \\
+    In \emph{Proc. of the 2021 Internet Measurement Conference} \\
+    (\textbf{IMC 2021}), November 2021. \\
+    Acceptance rate: 28\% (54/196)
+
+    \textbf{Weaponizing Middleboxes for TCP Reflected Amplification} \\
+    Kevin Bock, Abdulrahman Alaraj*, Yair Fax, Kyle Hurley, Eric Wustrow, and Dave Levin \\
+    In \emph{Proc.\ 30th USENIX Security Symposium} \\
+    (\textbf{USENIX Security 2021}), August 2021. \\
+    \textbf{$\star$ Awarded Distinguished Paper.} \\
+    \textbf{$\star$ Internet Defense Prize (Third place).} \\
+    Acceptance rate: 19\% % 246/?
+    \blfootnote{* denotes University of Colorado graduate student}
+
+    \textbf{Improving Signal's Sealed Sender} \\
+    Ian Martiny*, Gabriel Kaptchuk, Adam Aviv, Dan Roche, and Eric Wustrow \\
+    In \emph{Proc. of Network and Distributed System Security Symposium} \\
+    (\textbf{NDSS 2021}), February 2021. \\
+    Acceptance rate: 16\% % TODO: update with actual numbers: (87/544)
+
+    \textbf{Investigating Large Scale HTTPS Interception in Kazakhstan} \\
+    Ram Sundara Raman, Leonid Evdokimov, Eric Wustrow, J. Alex Halderman, and Roya Ensafi \\
+    In \emph{Proc. of the 2020 Internet Measurement Conference} \\
+    (\textbf{IMC 2020}), November 2020. \\
+    Acceptance rate: 25\% (53/216)
+
+    \textbf{HTTPT: A Probe-Resistant Proxy} \\
+    Sergey Frolov*, and Eric Wustrow \\
+    In \emph{Proc. of USENIX Workshop on Free and Open Communications on the Internet} \\
+    (\textbf{FOCI 2020}), August 2020. \\
+    Acceptance rate: 55\% (11/20)
+
+    \textbf{Running Refraction Networking for Real} \\
+    Ben VanderSloot, Sergey Frolov*, Jack Wampler*, Sze Chuen Tan, Irv Simpson, Michalis Kallitsis, J. Alex Halderman, Nikita Borisov, and Eric Wustrow \\
+    In \emph{Proc. on Privacy Enhacning Technologies} \\
+    (\textbf{PETS 2020}), July 2020. \\
+    Acceptance rate: 23\% (78/339)   % Total 2020 issues, 27% 24/89 for 2020.4 issue,
+
+    \textbf{Detecting Probe-resistant Proxies} \\
+    Sergey Frolov*, Jack Wampler*, and Eric Wustrow \\
+    In \emph{Proc. of Network and Distributed System Security Symposium} \\
+    (\textbf{NDSS 2020}), February 2020. \\
+    Acceptance rate: 17\% (88/506)
 
     \textbf{Conjure: Summoning Proxies from Unused Address Space} \\
-    Sergey Frolov, Jack Wampler, Sze Chuen Tan, J. Alex Halderman, Nikita Borisov, and Eric Wustrow \\
-    (to appear) In \emph{Proc.\ 26th ACM Conference on Computer and Communications Security} \\
+    Sergey Frolov*, Jack Wampler*, Sze Chuen Tan, J. Alex Halderman, Nikita Borisov, and Eric Wustrow \\
+    In \emph{Proc.\ 26th ACM Conference on Computer and Communications Security} \\
     (\textbf{CCS 2019}), November 2019. \\
     Acceptance rate: 16\% (117/722)
 
-    \textbf{This is Your President Speaking: Spoofing Alerts in 4G LTE Networks} \\
-    Gyuhong Lee, Jihoon Lee, Jinsung Lee, Youngbin Im, Max Hollingsworth, Eric Wustrow, Dirk Grunwald, and Sangtae Ha \\
+    \textbf{\href{https://ericw.us/trow/lte-alerts.pdf}{This is Your President Speaking: Spoofing Alerts in 4G LTE Networks}} \\
+    Gyuhong Lee*, Jihoon Lee*, Jinsung Lee*, Youngbin Im*, Max Hollingsworth*, Eric Wustrow, Dirk Grunwald, and Sangtae Ha \\
     In \emph{Proc. of the 17th ACM International Conference on Mobile Systems, Applications and Services} \\
     (\textbf{MobiSys 2019}), July 2019. \\
     \textbf{$\star$ Awarded Best Paper.} \\
     Acceptance rate: 23\% (40/172)
 
-    \textbf{ExSpectre: Hiding Malware in Speculative Execution} \\
-    Jack Wampler, Ian Martiny, and Eric Wustrow \\
+    \textbf{\href{https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_02B-5_Wampler_paper.pdf}{ExSpectre: Hiding Malware in Speculative Execution}} \\
+    Jack Wampler*, Ian Martiny*, and Eric Wustrow \\
     In \emph{Proc. of Network and Distributed System Security Symposium} \\
     (\textbf{NDSS 2019}), February 2019. \\
     Acceptance rate: 17\% (89/521)
 
     \textbf{\href{https://tlsfingerprint.io}{The use of TLS in Censorship Circumvention}} \\
-    Sergey Frolov and Eric Wustrow \\
+    Sergey Frolov* and Eric Wustrow \\
     In \emph{Proc. of Network and Distributed System Security Symposium} \\
     (\textbf{NDSS 2019}), February 2019. \\
     Acceptance rate: 17\% (89/521)
 
 
-    \textbf{Breaking the Trust Dependence on Third Party Processes for Reconfigurable Secure Hardware} \\
-    Aimee Coughlin, Greg Cusack, Jack Wampler, Eric Keller, and Eric Wustrow \\
+    \textbf{\href{https://ericw.us/sdsh\_fpga2019.pdf}{Breaking the Trust Dependence on Third Party Processes for Reconfigurable Secure Hardware}} \\
+    Aimee Coughlin*, Greg Cusack*, Jack Wampler*, Eric Keller, and Eric Wustrow \\
     In \emph{Proc.\ 27th ACM/SIGDA International Symposium on Field-Programmable Gate Arrays}\\
     (\textbf{FPGA 2019}), February 2019. \\
     % Acceptance rate ??
 
-    \textbf{The Proof is in the Pudding - Proofs of Work for Solving Discrete Logarithms} (Short paper) \\
+    \textbf{\href{https://eprint.iacr.org/2018/939.pdf}{The Proof is in the Pudding - Proofs of Work for Solving Discrete Logarithms}} (Short paper) \\
     Marcella Hastings, Nadia Heninger, and Eric Wustrow \\
     In \emph{Proc.\ 23rd Intl.\ Conference on Financial Cryptography and Data Security} \\
     (\textbf{FC 2019}), February 2019.\\
     Acceptance rate: 22\% (40/178)   % 33 + 7 short
 
-    \textbf{Proof-of-Censorship: Enabling Centralized Censorship-resistant Content Providers} \\
-    Ian Martiny, Ian Miers, and Eric Wustrow \\
+    \textbf{\href{https://ericw.us/trow/proof-of-censorship.pdf}{Proof-of-Censorship: Enabling Centralized Censorship-resistant Content Providers}} \\
+    Ian Martiny*, Ian Miers, and Eric Wustrow \\
     In \emph{Proc.\ 22nd Intl.\ Conference on Financial Cryptography and Data Security} \\
     (\textbf{FC 2018}), February 2018. \\
     Acceptance rate: 26\% (29/109)
 
-    \textbf{Initial Measurements of the Cuban Street Network} (Short paper) \\
+    \textbf{\href{https://conferences.sigcomm.org/imc/2017/papers/imc17-final186.pdf}{Initial Measurements of the Cuban Street Network}} (Short paper) \\
     Eduardo E P Pujol, Will Scott, Eric Wustrow, J Alex Halderman \\
     In \emph{Proc. of the 2017 Internet Measurement Conference} \\
     (\textbf{IMC 2017}), November 2017. \\
     Acceptance rate: 23\% (42/179)
 
-    \textbf{An ISP-scale deployment of TapDance} \\
-    Sergey Frolov, Fred Douglas, Will Scott, Allison McDonald, Benjamin VanderSloot, Rod Hynes, Adam Kruger, Michalis Kallitsis, David G Robinson, Steve Schultze, Nikita Borisov, Alex Halderman, and Eric Wustrow \\
+    \textbf{\href{https://www.usenix.org/system/files/conference/foci17/foci17-paper-frolov_0.pdf}{An ISP-scale deployment of TapDance}} \\
+    Sergey Frolov*, Fred Douglas, Will Scott, Allison McDonald, Benjamin VanderSloot, Rod Hynes, Adam Kruger, Michalis Kallitsis, David G Robinson, Steve Schultze, Nikita Borisov, Alex Halderman, and Eric Wustrow \\
     In \emph{Proc. of USENIX Workshop on Free and Open Communications on the Internet} \\
     (\textbf{FOCI 2017}), August 2017. \\
     Acceptance rate: 55\% (10/18)
 
 %\newpage
-    \textbf{Trusted click: Overcoming security issues of NFV in the cloud} \\
-    Michael Coughlin, Eric Keller, and Eric Wustrow \\
+    \textbf{\href{http://nsr.colorado.edu/coughlin/doc/sdnnfvsec2017.pdf}{Trusted click: Overcoming security issues of NFV in the cloud}} \\
+    Michael Coughlin*, Eric Keller, and Eric Wustrow \\
     In \emph{Proc. of the ACM International Workshop on Security in Software Defined Networks \& Network Function Virtualization} \\
     (\textbf{SDN-NFVSec}), March 2017. \\
     \textbf{$\star$ Awarded Best Paper.}
 
-\newpage
+%\newpage
     \textbf{\href{https://github.com/ewust/DDoSCoin}{DDoSCoin: Cryptocurrency with a Malicious Proof-of-Work}} \\
     Eric Wustrow, and Benjamin VanderSloot \\
     In \emph{Proc. of the 10th USENIX Workshop on Offensive Technologies} \\
@@ -191,7 +251,7 @@ I have exposed vulnerabilities in insecure electronic voting systems in the U.S.
     Acceptance rate: 16\% (45/277)
 
 
-\newpage
+%\newpage
     \textbf{\href{https://jhalderm.com/pub/papers/cage-fc13.pdf}{CAge: Taming Certificate Authorities by Inferring Restricted Scopes}} \\
     James Kasten, Eric Wustrow, and J. Alex Halderman \\
     In \emph{Proc.\ 17th Intl.\ Conference on Financial Cryptography and Data Security} \\
@@ -273,21 +333,57 @@ We demonstrated low-tech attacks that could compromise India's nation-wide elect
 
 \section{\large Funding}
 
+
+\textbf{CAREER: Combating Censorship from within the Network} \\
+Source: NSF \\
+Award Amount: \$569,911 (PI) \\
+05/01/2022 -- 04/31/2027
+
+\textbf{EAGER: SaTC-EDU: Integrating Cybersecurity into Artificial Intelligence Education} \\
+Source: NSF \\
+Award Amount: \$297,000 (co-PI) \\
+05/01/2021 -- 04/31/2023
+
+
+\textbf{Facilitating and Supporting Transport protocols That Result in Advanced Circumvention Capabilities (FAST TRACC)} \\
+Source: Psiphon, Inc.
+Award Amount: \$128,500 (co-PI) \\
+08/01/2021 -- 7/31/2023
+
+\textbf{Studying the Impact of IPv6 on Information Controls and Censorship Circumvention} \\
+Source: NSF \\
+Award Amount: \$400,000 (PI; total award: \$1,200,000) \\
+10/01/2020 -- 09/31/2024
+
+\textbf{Refraction Networking Operationalization (ReNO)} \\
+Source: Psiphon, Inc. \\
+Award Amount: \$200,000 (co-PI) \\
+10/01/2020 -- 08/01/2022
+
 \textbf{SDR LTE Network Testbed and RESPONS} \\
 Source: Public Saftey Communications Research (PSCR) Division - NIST \\
 Award Amount: \$1,502,796 (co-PI) \\
-06/01/2017 - 05/31/2020
+06/01/2017 -- 05/31/2020
 
 \textbf{Decoy Routing: Internet Freedom in the Network's Core} \\
 Source: United States Department of State \\
 Award Amount: \$485,696 (co-PI; total award: \$4,000,026) \\
-04/01/2016 - 09/31/2019
+04/01/2016 -- 09/31/2019
 
 
 
 \vspace{6pt}
 %\newpage
 \section{\large Honors and Awards}
+
+    \textbf{Distinguished Paper of USENIX Security 2021}
+    for ``Weaponizing Middleboxes for TCP Reflected Amplification.''
+
+    \textbf{USENIX/Facebook Internet Defense Prize 2021 (Third Place)}
+    for ``Weaponizing Middleboxes for TCP Reflected Amplification.'' (\$40,000 Prize)
+
+    \textbf{Holland Teaching Excellence Award} 2021 (\$2,000 Prize)
+
     \textbf{Best Paper of Mobisys 2019}
     for ``This is Your President Speaking: Spoofing Alerts in 4G LTE Networks.''
 
@@ -310,6 +406,9 @@ Award Amount: \$485,696 (co-PI; total award: \$4,000,026) \\
 
 \vspace{6pt}
 \section{\large Invited Talks and Panels}
+
+\emph{Censorship Circumvention} \\
+    University of Colorado Technology, Cybersecurity, and Policy (TCP) seminar, January 2021
 
 \emph{Refraction Networking: Deploying next-generation censorship circumvention} \\
     RightsCon (Tunis), June 2019
@@ -361,6 +460,9 @@ Award Amount: \$485,696 (co-PI; total award: \$4,000,026) \\
 \section{\large Professional Service}
 
     \emph{Department:}\\
+        Cybersecurity Faculty Search Committee 2021-2022 \\
+        Curriculum Committee 2020-2022 \\
+        Computer Engineering Faculty Search Committee 2019-2020 \\
         Chair Search Committee 2018-2019 \\
         Graduate Committee 2018-2019 \\
         Big Data / Machine Learning / Security Faculty Search Committee 2017-2018 \\
@@ -369,42 +471,48 @@ Award Amount: \$485,696 (co-PI; total award: \$4,000,026) \\
         Graduate Committee 2015-2016 \\
 
      \emph{Program committee member:}\\
-            Internet Measurement Conference (IMC) 2019  \\
-            USENIX Security Symposium 2018, 2019    \\
-            Financial Cryptography (FC) 2017, 2018, 2019 \\
+            Internet Measurement Conference (IMC) 2019, 2020, 2022  \\
+            USENIX Security Symposium 2018, 2019, 2021, 2022    \\
+            Financial Cryptography (FC) 2017, 2018, 2019, 2020 \\
             TheWebConf (formerly WWW) 2017, 2019 \\
             Research in Attacks, Intrusions and Defenses (RAID) 2018 \\
-            USENIX Workshop on Free and Open Communications on the Internet (FOCI) 2013, 2016, 2018. \\
-     
-    \emph{External reviewer:}
+            USENIX Workshop on Free and Open Communications on the Internet (FOCI) 2013, 2016, 2018, 2020. \\
+
+    \emph{External reviewer:}\\
     USENIX Security Symposium 2014,
     ACM Conference on Computer and Communications Security (CCS) 2012--15,
     ACM Internet Measurement Conference (IMC) 2015,
     IEEE/ACM Transactions on Networking 2012.
 
+    \emph{Co-Chair:}\\
+    Free and Open Communications on the Internet (FOCI) 2021.
+
+\vspace{6pt}
+\section{\large PhD Students}
+    Sergey Frolov (graduated 2020; Google) \\
+    Ian Martiny (graduated 2022; Facebook) \\
+    Jack Wampler (expected graduation 2023) \\ % 2018? 2019?
+    Abdulrahman Alaraj \\   % 2020 - ?
+    Jackson Sippe \\ % 2021 - ?
+
 \vspace{6pt}
 \section{\large Teaching}
-    \emph{ECEN 5032: Cryptocurrency Security} (Spring 2019)
-
-    \emph{ECEN 3350: Programming Digital Systems} (Fall 2018, Fall 2019)
-
-    \emph{ECEN 5003: Censorship Circumvention} (Fall 2017)
-
-    \emph{ECEN 5032: Introduction to Computer Security} (Fall 2016, Spring 2017, Spring 2018)
-
-    \emph{ECEN 5014: Computer Security and Privacy} (Spring 2016)
-
-    \emph{EECS 388: Introduction to Computer Security}  (Spring 2015)\\
-    \textbf{Co-instructor} of undergraduate security course, with Professor Z. Morley Mao. Responsible for teaching half of lecture sections and developing curriculum.
-
-    \emph{TA EECS 588: Computer and Network Security} (2011--2014)\\
-    Served as teaching assistant, guest lectured, and advised course project groups.
-
+    \emph{ECEN 2350: Digital Logic} (Spring 2022)
+    \emph{ECEN 4133: Computer Security Fundamentals} (Spring 2020, Spring 20201, Fall 2022)\\
+    \emph{ECEN 5032: Cryptocurrency Security} (Spring 2019)\\
+    \emph{ECEN 3350: Programming Digital Systems} (Fall 2018, Fall 2019, Fall 2020)\\
+    \emph{ECEN 5003: Censorship Circumvention} (Fall 2017)\\
+    \emph{ECEN 5032: Introduction to Computer Security} (Fall 2016, Spring 2017, Spring 2018)\\
+    \emph{ECEN 5014: Computer Security and Privacy} (Spring 2016)\\
+    \emph{EECS 388: Introduction to Computer Security}  (U. Michigan co-instructor, Spring 2015)\\
+    %Co-instructor of undergraduate security course, with Professor Z. Morley Mao.
+    %Responsible for teaching half of lecture sections and developing curriculum.
+    %\emph{TA EECS 588: Computer and Network Security} (2011--2014)\\
+    %Served as teaching assistant, guest lectured, and advised course project groups.\\
     %\emph{EECS 398: Introduction to Computer Security}  (2011, 2013)\\
     %Guest taught several lectures each year.
-
-    \emph{Camp CAEN: Computer programming summer camp}  (2008)\\
-    Taught middle- and high-school students HTML, CSS, Javascript, and Java.
+    %\emph{Camp CAEN: Computer programming summer camp}  (2008)\\
+    %Taught middle- and high-school students HTML, CSS, Javascript, and Java.
 
 
 \if0
